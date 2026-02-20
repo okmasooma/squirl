@@ -1,0 +1,446 @@
+/* Squirl Sign Case Competition - Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --color-bg: #faf8fc;
+    --color-bg-card: #ffffff;
+    --color-text: #2d1f3d;
+    --color-text-muted: #5c4d6b;
+    --color-accent: #6a2fb4;
+    --color-accent-hover: #7d3fcf;
+    --color-border: #e8e0f0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'DM Sans', -apple-system, sans-serif;
+    background-color: var(--color-bg);
+    color: var(--color-text);
+    line-height: 1.6;
+    min-height: 100vh;
+}
+
+.container {
+    max-width: 720px;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+}
+
+/* Header & Navigation */
+.header {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid var(--color-border);
+}
+
+.nav-container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 1.25rem;
+}
+
+.nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 60px;
+    gap: 1rem;
+}
+
+.logo-link {
+    display: flex;
+    align-items: center;
+    gap: 0.65rem;
+    text-decoration: none;
+    color: var(--color-text);
+}
+
+.logo-link:hover {
+    color: var(--color-accent);
+}
+
+.logo-img {
+    height: 36px;
+    width: auto;
+}
+
+.logo-text {
+    font-weight: 700;
+    font-size: 1rem;
+    white-space: nowrap;
+}
+
+.nav-list {
+    display: flex;
+    list-style: none;
+    gap: 1.25rem;
+    align-items: center;
+    flex-shrink: 0;
+}
+
+.nav-link {
+    color: var(--color-text-muted);
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 0.9rem;
+    white-space: nowrap;
+    transition: color 0.2s;
+}
+
+.nav-link:hover,
+.nav-link.active {
+    color: var(--color-accent);
+}
+
+.nav-signup {
+    background: var(--color-accent);
+    color: #ffffff !important;
+    padding: 0.4rem 0.85rem;
+    border-radius: 50px;
+    font-size: 0.85rem;
+}
+
+.nav-signup:hover {
+    background: var(--color-accent-hover);
+    color: #ffffff !important;
+}
+
+.hamburger {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 8px;
+}
+
+.hamburger .bar {
+    width: 22px;
+    height: 2px;
+    background: var(--color-text);
+    border-radius: 1px;
+}
+
+/* Hero Section */
+.hero {
+    padding: 4rem 0 5rem;
+}
+
+.hero-logo {
+    height: 64px;
+    width: auto;
+    margin-bottom: 1.5rem;
+}
+
+.hero-title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+    letter-spacing: -0.02em;
+}
+
+.hero-tagline {
+    font-size: 1rem;
+    color: var(--color-accent);
+    margin-bottom: 2rem;
+}
+
+.hero-text {
+    margin-bottom: 2rem;
+}
+
+.hero-text p {
+    margin-bottom: 1.25rem;
+    color: var(--color-text-muted);
+    font-size: 1.05rem;
+}
+
+.hero-text a {
+    color: var(--color-accent);
+    text-decoration: none;
+}
+
+.hero-text a:hover {
+    text-decoration: underline;
+}
+
+/* Buttons */
+.btn {
+    display: inline-block;
+    padding: 0.75rem 1.5rem;
+    border-radius: 8px;
+    font-weight: 600;
+    font-size: 0.95rem;
+    text-decoration: none;
+    transition: background 0.2s, transform 0.2s;
+}
+
+.btn-primary {
+    background: var(--color-accent);
+    color: #ffffff;
+}
+
+.btn-primary:hover {
+    background: var(--color-accent-hover);
+}
+
+/* Requirements & Tips Pages */
+.requirements-page,
+.tips-page {
+    padding: 2rem 0 4rem;
+}
+
+.tips-intro {
+    color: var(--color-text-muted);
+    margin-bottom: 2.5rem;
+    font-size: 1.05rem;
+}
+
+.articles-list {
+    list-style: none;
+    margin-left: 0;
+}
+
+.articles-list a {
+    color: var(--color-accent);
+    text-decoration: none;
+}
+
+.articles-list a:hover {
+    text-decoration: underline;
+}
+
+.articles-list li {
+    margin-bottom: 0.6rem;
+}
+
+.page-title {
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 2rem;
+}
+
+.requirements-intro {
+    margin-bottom: 2.5rem;
+}
+
+.requirements-intro .note {
+    color: var(--color-text-muted);
+    padding: 1rem 1.25rem;
+    background: var(--color-bg-card);
+    border-radius: 8px;
+    border-left: 3px solid var(--color-accent);
+}
+
+.requirement-section {
+    margin-bottom: 2.5rem;
+}
+
+.requirement-section h2 {
+    font-size: 1.35rem;
+    margin-bottom: 1rem;
+    color: var(--color-text);
+}
+
+.requirement-section > p {
+    color: var(--color-text-muted);
+    margin-bottom: 1rem;
+}
+
+.feature-block {
+    background: var(--color-bg-card);
+    border-radius: 10px;
+    padding: 1.5rem 1.75rem;
+    margin-bottom: 1.25rem;
+    border: 1px solid var(--color-border);
+    box-shadow: 0 1px 3px rgba(106, 47, 180, 0.06);
+}
+
+.feature-block h3 {
+    font-size: 1.1rem;
+    margin-bottom: 0.75rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+}
+
+.badge {
+    font-size: 0.7rem;
+    padding: 0.25rem 0.5rem;
+    background: var(--color-accent);
+    color: #ffffff;
+    border-radius: 4px;
+    font-weight: 600;
+}
+
+.feature-block ul {
+    margin-left: 1.25rem;
+    color: var(--color-text-muted);
+}
+
+.feature-block li {
+    margin-bottom: 0.4rem;
+}
+
+.deadlines .deadline-grid {
+    display: grid;
+    gap: 1rem;
+}
+
+.deadline-item {
+    background: var(--color-bg-card);
+    border-radius: 10px;
+    padding: 1.5rem;
+    border: 1px solid var(--color-border);
+    box-shadow: 0 1px 3px rgba(106, 47, 180, 0.06);
+}
+
+.deadline-label {
+    display: block;
+    font-size: 0.8rem;
+    color: var(--color-accent);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    margin-bottom: 0.35rem;
+}
+
+.deadline-value {
+    font-size: 1.15rem;
+    font-weight: 600;
+}
+
+.deadline-desc {
+    color: var(--color-text-muted);
+    font-size: 0.95rem;
+    margin-top: 0.5rem;
+}
+
+/* Floating Sign-up Button */
+.signup-fab {
+    position: fixed;
+    bottom: 1.5rem;
+    right: 1.5rem;
+    z-index: 200;
+    padding: 1.15rem 2rem;
+    background: var(--color-accent);
+    color: #ffffff;
+    font-weight: 700;
+    font-size: 1.15rem;
+    text-decoration: none;
+    border-radius: 50px;
+    box-shadow: 0 4px 20px rgba(106, 47, 180, 0.4);
+    transition: background 0.2s, transform 0.2s, box-shadow 0.2s;
+    animation: twirl-attention 2.5s ease-in-out infinite;
+}
+
+.signup-fab:hover {
+    background: var(--color-accent-hover);
+    transform: scale(1.05);
+    box-shadow: 0 6px 24px rgba(106, 47, 180, 0.5);
+    animation: none;
+}
+
+@keyframes twirl-attention {
+    0%, 100% {
+        transform: rotate(-3deg) scale(1);
+    }
+    25% {
+        transform: rotate(3deg) scale(1.02);
+    }
+    50% {
+        transform: rotate(-3deg) scale(1.02);
+    }
+    75% {
+        transform: rotate(3deg) scale(1.02);
+    }
+}
+
+/* Footer */
+.footer {
+    margin-top: 0;
+    padding: 2rem 0;
+    border-top: 1px solid var(--color-border);
+    text-align: center;
+}
+
+.footer-logos {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+    margin-bottom: 1rem;
+}
+
+.footer-logo {
+    height: 36px;
+    width: auto;
+    object-fit: contain;
+    opacity: 0.9;
+}
+
+.footer p {
+    font-size: 0.9rem;
+    color: var(--color-text-muted);
+}
+
+/* Responsive - show hamburger when nav would overflow */
+@media (max-width: 880px) {
+    .hero-title {
+        font-size: 2rem;
+    }
+
+    .nav-list {
+        position: fixed;
+        top: 60px;
+        left: 0;
+        right: 0;
+        flex-direction: column;
+        background: #ffffff;
+        padding: 2rem;
+        gap: 1rem;
+        transform: translateY(-100%);
+        opacity: 0;
+        pointer-events: none;
+        transition: transform 0.2s, opacity 0.2s;
+        border-bottom: 1px solid var(--color-border);
+    }
+
+    .nav-list.open {
+        transform: translateY(0);
+        opacity: 1;
+        pointer-events: auto;
+    }
+
+    .hamburger {
+        display: flex;
+    }
+
+    .hamburger.open .bar:nth-child(1) {
+        transform: rotate(45deg) translate(5px, 5px);
+    }
+
+    .hamburger.open .bar:nth-child(2) {
+        opacity: 0;
+    }
+
+    .hamburger.open .bar:nth-child(3) {
+        transform: rotate(-45deg) translate(5px, -5px);
+    }
+
+    .hamburger .bar {
+        transition: transform 0.2s, opacity 0.2s;
+    }
+}
