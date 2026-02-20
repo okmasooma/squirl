@@ -1,0 +1,7 @@
+cd "/Users/masoomajaffry/Documents/Projects/Personal Portfolio"
+git init
+git add .
+git commit -m "Initial commit: Squirl Sign competition website"
+git remote add origin https://github.com/okmasooma/squirl-sign-info.git
+git branch -M main
+git push -u origin main
