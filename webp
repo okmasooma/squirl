@@ -1,4 +1,4 @@
-cd "~/Documents/Projects/Personal\ Portfolio"
+cd "$HOME/Documents/Projects/squirl"
 git init
 git add .
 git commit -m "Initial commit: Squirl Sign competition website"
